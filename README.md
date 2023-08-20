@@ -1,6 +1,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE.md)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/xpbowler/2023ht6web.svg)
 
+
 ## Inspiration
 In 2023, Canada forced social media companies such as Meta to remove Canadians' ability to read news on their platform. Five years earlier, 70% of the CBC's revenue was from the government. Large news corporations own multiple journals and write increasingly similar, biased, uninteresting and weak articles to promote their narrative. A solution against the constant unseen and unfelt propaganda was needed. We decided to tackle all those issues by creating OpenBias, a Chrome extension with crowdsourced data about the political bias of news articles.
 
@@ -23,11 +24,6 @@ Through this hackathon, we learned about how to create Chrome extensions and the
 OpenBias will expand to more and more users, solidifying the data we receive as statistically significant and representative of the population at large. As the number of websites and data points on our website increases, we plan to web scrape the websites and train a predictive neural network that will predict the political bias of any piece of text, including AI-generated text such as from ChatGPT. This will be actively used on our product with a low value (preferring human feedback more than AI) but will allow us to give predictions earlier when the number of votes is low. Additionally, this network could be made public to allow others access to an open, transparent way to identify political bias. It will help solve the rapidly growing issue of bias in generative-AI. OpenBias also has the potential to become a leading "fact-checker" type third party. Through transparent procedures, we may gain the trust of many news readers. This will prompt us into reviewing articles from certain news corporations as a third party and post stamps of approvals on unbiased and high-quality articles. The number of parameters to vote on will definitely be expanded upon using a drop-down menu, but those will just be a copy of the existing idea. Additionally, it would be important to track the IP address of voters or similar information to make it difficult to bot the votes.  Our main target was political news, but the applications of this idea don't have to stop there.
 
 ## Installation
-
-Requirements: 
-* System: Python (3.11.4), Anaconda (23.3.1)
-* CNN: Tensorflow (2.11)
-* Misc: Flask (2.3.2), React (18.2.0)
 
 Instructions:
 1. Clone the repository
