@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE.md)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/xpbowler/2023ht6web.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inspiration
+In 2023, Canada forced social media companies such as Meta to remove Canadians' ability to read news on their platform. Five years earlier, 70% of the CBC's revenue was from the government. Large news corporations own multiple journals and write increasingly similar, biased, uninteresting and weak articles to promote their narrative. A solution against the constant unseen and unfelt propaganda was needed. We decided to tackle all those issues by creating OpenBias, a Chrome extension with crowdsourced data about the political bias of news articles.
 
-## Available Scripts
+## What it does
+OpenBias consists of a website and a Chrome extension. The Chrome extension is always accessible no matter what webpage a user is on. If they're on a political news article, the user can open the extension and rate the bias (left-leaning or right-leaning) after reading. This data will be pushed to a cloud-based database and the average of all votes will be displayed in the pop-up. This information along with search features, displaying all articles, and a more detailed view is also available on the website. 
 
-In the project directory, you can run:
+## How we built it
+The Chrome extension was built using HTML/CSS/JS and called several node.js functions to write to our database. A manifest.json file allowed us to load the Chrome extension into our web browsers. The website was bootstrapped with React.js.
 
-### `npm start`
+## Challenges we ran into
+Accessing script files from the Google Cloud API or other sources was crucial to our project, however many important files were blocked by the Chrome extension host or the CORS protocol. This seems to be for safety reasons and we couldn't bypass them.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Accomplishments that we're proud of
+We're proud of having a functional cloud-based database that anyone with access to the Google extension can experience. The Google extension has features to read, update and create data in the MongoDB database. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## What we learned
+Through this hackathon, we learned about how to create Chrome extensions and the various security protocols that Chrome uses to protect its users. 
 
-### `npm test`
+## What's next for OpenBias
+OpenBias will expand to more and more users, solidifying the data we receive as statistically significant and representative of the population at large. As the number of websites and data points on our website increases, we plan to web scrape the websites and train a predictive neural network that will predict the political bias of any piece of text, including AI-generated text such as from ChatGPT. This will be actively used on our product with a low value (preferring human feedback more than AI) but will allow us to give predictions earlier when the number of votes is low. Additionally, this network could be made public to allow others access to an open, transparent way to identify political bias. It will help solve the rapidly growing issue of bias in generative-AI. OpenBias also has the potential to become a leading "fact-checker" type third party. Through transparent procedures, we may gain the trust of many news readers. This will prompt us into reviewing articles from certain news corporations as a third party and post stamps of approvals on unbiased and high-quality articles. The number of parameters to vote on will definitely be expanded upon using a drop-down menu, but those will just be a copy of the existing idea. Additionally, it would be important to track the IP address of voters or similar information to make it difficult to bot the votes.  Our main target was political news, but the applications of this idea don't have to stop there.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+Requirements: 
+* System: Python (3.11.4), Anaconda (23.3.1)
+* CNN: Tensorflow (2.11)
+* Misc: Flask (2.3.2), React (18.2.0)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Instructions:
+1. Clone the repository
+```
+$ git clone https://github.com/xpbowler/2023ht6web
+```
+2. Install required dependencies
+```
+$ npm install
+```
+4. Run frontend
+```
+$ npm start
+```
+4. Run ```MongoDB``` backend
+```
+$ cd database
+$ nodemon server
+```
